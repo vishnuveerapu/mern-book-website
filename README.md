@@ -59,13 +59,14 @@ Database (MongoDB)
 - Users can delete a book entry from the database.
 
 ## 5. File Structure
-
 ```
 bookWebsite/
 │
 ├── backend/
 │   ├── models/
 │   │   └── Book.js
+│   ├── uploads/
+│   │   └── (list of book files that are uploaded when that book is added)
 │   ├── routes/
 │   │   └── bookRoutes.js
 │   ├── server.js
@@ -75,9 +76,17 @@ bookWebsite/
 │   ├── src/
 │   │   ├── App.js
 │   │   └── App.css
+│   │   ├── Components/
+│   │   │   ├── BookForm.js
+│   │   │   ├── BookList.js
+│   │   │   ├── SearchBar.js	 
+│   │   └── App.css
+│   │   └── Pages/
+│   │   	     ├── Home.js
 │   └── public/
 │
 └── README.md (this documentation)
+
 ```
 
 ## 6. Running the Project
@@ -102,7 +111,7 @@ npm start
 
 ### .env (backend)
 ```env
-MONGO_URI=mongodb://localhost:27017/bookdb
+MONGO_URI=mongodb+srv://bookuser:bookpass123@bookcluster.io3fzru.mongodb.net/
 PORT=5000
 ```
 
